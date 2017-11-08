@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
         "source": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
