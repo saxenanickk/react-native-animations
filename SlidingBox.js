@@ -2,7 +2,7 @@ import React from "react";
 import {
   Animated,
   Easing,
-    Dimensions
+	Dimensions
 } from "react-native";
 
 const { width, height } = Dimensions.get("window");
@@ -21,7 +21,7 @@ export default class SlidingBox extends React.Component {
         toValue: { x: 0, y: -height/1.15 },
         duration: 200,
         delay: 0,
-        easing: Easing.linear(Easing.ease)
+        easing: Easing.linear
       }
     );
 
@@ -31,22 +31,15 @@ export default class SlidingBox extends React.Component {
 				toValue: { x: 0, y: 0 },
 				duration: 200,
 				delay: 0,
-				easing: Easing.linear(Easing.ease)
+				easing: Easing.linear
 			}
 		);
   }
 
   shouldComponentUpdate(props) {
-    props.startAnimation ? this.animate() : this.slideDown.start();
+    props.startAnimation ? this.slideUp.start() : this.slideDown.start();
     return true;
   }
-
-  animate = () => {
-		this.slideUp.start();
-		setTimeout(() => {
-			this.props.callbackAnimation();
-		}, 3000);
-	}
 
   componentDidMount() {
     

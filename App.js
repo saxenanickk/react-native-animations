@@ -11,7 +11,8 @@ import {
   Text,
   View,
 	Dimensions,
-	TextInput
+	TextInput,
+	BackHandler
 } from 'react-native';
 
 const  { height, width } = Dimensions.get("window");
@@ -25,14 +26,26 @@ export default class App extends Component {
     this.state = {
       startAnimation: false
     };
+		this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
+
+  componentWillMount() {
+		BackHandler.addEventListener("hardwareBackPress", this.handleBackButtonClick);
+	}
+
+	componentWillUnmount() {
+		BackHandler.removeEventListener("hardwareBackPress", this.handleBackButtonClick);
+	}
+
+  handleBackButtonClick = () => {
+  	this.setState({ startAnimation: false });
+		return true;
+	}
 
   render() {
     return (
       <View style={styles.container}>
-        <SlidingBox callbackAnimation={(newState) => {
-        	this.setState({ startAnimation: false })
-        }} startAnimation={this.state.startAnimation}>
+        <SlidingBox startAnimation={this.state.startAnimation}>
 					{!this.state.startAnimation ?
 					<Text onPress={() => this.setState({ startAnimation: true })} style={styles.welcome}>
             Click Here
@@ -40,6 +53,7 @@ export default class App extends Component {
 					<View style={{ borderWidth:1, borderColor: "#000000", margin: 10 }}>
 						<TextInput placeHolder={"Origin"} />
 						<TextInput placeHolder={"Destination"}/>
+						<Text>Press Back Button to go to previous state.</Text>
 					</View>}
         </SlidingBox>
       </View>
