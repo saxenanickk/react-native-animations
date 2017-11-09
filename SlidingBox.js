@@ -20,7 +20,8 @@ export default class SlidingBox extends React.Component {
     // };
 
     // this.spinValue = new Animated.Value(0);
-    this.animatedValue = new Animated.Value(0)
+    this.animatedValue = new Animated.Value(0);
+    this.opacityValue = new Animated.Value(0);
 
     // this.slideUp = Animated.timing(
     //   this.state.slide,
@@ -60,6 +61,18 @@ export default class SlidingBox extends React.Component {
       {
         toValue: 1,
         duration: 1000,
+        easing: Easing.linear(Easing.ease)
+      }
+    ).start(() => this.animate());
+  }
+
+  opacity () {
+    this.opacityValue.setValue(0);
+    Animated.timing(
+      this.opacityValue,
+      {
+        toValue: 1,
+        duration: 2000,
         easing: Easing.linear
       }
     ).start(() => this.animate());
@@ -98,7 +111,11 @@ export default class SlidingBox extends React.Component {
     // });
     const textSize = this.animatedValue.interpolate({
       inputRange: [0, 0.3, 1],
-      outputRange: [width/5, width/3, width/5]
+      outputRange: [width/5, width/2.5, width/2.5]
+    });
+    const opacity = this.animatedValue.interpolate({
+      inputRange: [0, 0.3, 1],
+      outputRange: [3, 0, 0]
     });
     // const rotateX = this.animatedValue.interpolate({
     //   inputRange: [0, 0.5, 1],
@@ -134,7 +151,7 @@ export default class SlidingBox extends React.Component {
             width: textSize,
             height: textSize,
             borderRadius: width/5,
-            borderWidth: 3,
+            borderWidth: opacity,
             borderColor: "#3FAAD3",
             }} >
           <View style={{ width:10, height: 10, backgroundColor: "#3FAAD3" }}/>
