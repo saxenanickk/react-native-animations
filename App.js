@@ -46,15 +46,15 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <SlidingBox startAnimation={this.state.startAnimation}>
-					{!this.state.startAnimation ?
-					<Text onPress={() => this.setState({ startAnimation: true })} style={styles.welcome}>
-            Click Here
-          </Text>:
-					<View style={{ borderWidth:1, borderColor: "#000000", margin: 10 }}>
-						<TextInput placeHolder={"Origin"} />
-						<TextInput placeHolder={"Destination"}/>
-						<Text>Press Back Button to go to previous state.</Text>
-					</View>}
+         {/*!this.state.startAnimation ?
+         <Text onPress={() => this.setState({ startAnimation: true })} style={styles.welcome}>
+                Click Here
+              </Text>:
+         <View style={{ borderWidth:1, borderColor: "#000000", margin: 10 }}>
+          <TextInput placeHolder={"Origin"} />
+          <TextInput placeHolder={"Destination"}/>
+          <Text>Press Back Button to go to previous state.</Text>
+         </View>*/}
         </SlidingBox>
       </View>
     );
