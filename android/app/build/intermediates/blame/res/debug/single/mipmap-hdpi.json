@@ -4,6 +4,10 @@
         "source": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/apple/Desktop/merge_conflicts/platify/react-native-animations/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/apple/Desktop/merge_conflicts/platify/react-native-animations/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
         "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }

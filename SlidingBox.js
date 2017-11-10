@@ -6,10 +6,13 @@ import {
   Easing,
   Image,
   Text,
-  Dimensions
+  Dimensions,
+  PanResponder,
 } from "react-native";
 
 const { width, height } = Dimensions.get("window");
+
+var xVal = 100;
 
 export default class SlidingBox extends React.Component {
 
@@ -18,10 +21,15 @@ export default class SlidingBox extends React.Component {
     // this.state = {
     //   slide: new Animated.ValueXY({ x: 0, y: 0 })
     // };
-
+    this.state ={
+      xVal:height-100,
+      right:10,
+      width:width-20,
+    }
     // this.spinValue = new Animated.Value(0);
     this.animatedValue = new Animated.Value(0);
     this.opacityValue = new Animated.Value(0);
+    this.heightValue = new Animated.Value(0);
 
     // this.slideUp = Animated.timing(
     //   this.state.slide,
@@ -49,9 +57,63 @@ export default class SlidingBox extends React.Component {
     return true;
   }
 
+  componentWillMount() {
+    lol = 'lol'
+    this._panResponder = PanResponder.create({
+      // Ask to be the responder:
+      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => true,
+      onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+
+      onPanResponderGrant: (evt, gestureState) => {
+        console.log('started');
+        // The gesture has started. Show visual feedback so the user knows
+        // what is happening!
+
+        // gestureState.d{x,y} will be set to zero now
+      },
+      onPanResponderMove: (evt, gestureState) => {
+        console.log(gestureState);
+        this.setState({xVal:gestureState.moveY})
+        // The most recent move distance is gestureState.move{X,Y}
+
+        // The accumulated gesture distance since becoming responder is
+        // gestureState.d{x,y}
+      },
+      onPanResponderTerminationRequest: (evt, gestureState) => true,
+      onPanResponderRelease: (evt, gestureState) => {
+        if (this.state.xVal < height/2) {
+          this.setState(
+            {
+              xVal:0,
+              width:width,
+              right:0,
+            }
+          );
+        }
+        else {
+          this.setState(
+            {
+              xVal:height-100,
+              width:width-20,
+              right:10,
+            }
+          );
+        }
+      },
+      onPanResponderTerminate: (evt, gestureState) => {
+        // Another component has become the responder, so this gesture
+        // should be cancelled
+      },
+      onShouldBlockNativeResponder: (evt, gestureState) => {
+        // Returns whether this component should block native components from becoming the JS
+        // responder. Returns true by default. Is currently only supported on android.
+        return true;
+      },
+    });
+  }
   componentDidMount() {
-    // this.spin();
-    this.animate();
   }
 
   animate () {
@@ -72,7 +134,7 @@ export default class SlidingBox extends React.Component {
       this.opacityValue,
       {
         toValue: 1,
-        duration: 2000,
+        duration: 15000,
         easing: Easing.linear
       }
     ).start(() => this.animate());
@@ -121,7 +183,7 @@ export default class SlidingBox extends React.Component {
     //   inputRange: [0, 0.5, 1],
     //   outputRange: ['0deg', '180deg', '0deg']
     // });
-
+    console.log(lol);
     return(
       <View style={styles.container}>
         {/*<Animated.View*/}
@@ -144,18 +206,28 @@ export default class SlidingBox extends React.Component {
             {/*height: 30,*/}
             {/*width: 40,*/}
             {/*backgroundColor: 'orange'}} />*/}
-        <Animated.View
+        <View
+          {...this._panResponder.panHandlers}
+          style={[{
+            flex:1,
+            flexDirection:'row',
+            alignSelf:'baseline',
+            position:'absolute',
+          }, {
+            top:this.state.xVal,
+            right: this.state.right,
+          }]}>
+          <Animated.View
           style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: textSize,
-            height: textSize,
-            borderRadius: width/5,
-            borderWidth: opacity,
-            borderColor: "#3FAAD3",
-            }} >
-          <View style={{ width:10, height: 10, backgroundColor: "#3FAAD3" }}/>
-        </Animated.View>
+            height:height-this.state.xVal,
+            width:this.state.width,
+            alignSelf:'center',
+            justifyContent:'center',
+            backgroundColor:"#235445",
+          }}>
+            <Text style={{alignSelf:'center'}}>Footer</Text>
+          </Animated.View>
+        </View>
         {/*<Animated.View*/}
           {/*style={{*/}
             {/*transform: [{rotateX}],*/}
