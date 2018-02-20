@@ -33,7 +33,7 @@
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.2/res/anim/catalyst_push_up_in.xml"
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/res/anim/catalyst_push_up_in.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.2/res/anim/catalyst_slide_up.xml"
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/res/anim/catalyst_slide_up.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.2/res/anim/catalyst_fade_out.xml"
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/res/anim/catalyst_fade_out.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
@@ -61,7 +61,7 @@
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.2/res/anim/catalyst_push_up_out.xml"
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/res/anim/catalyst_push_up_out.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
@@ -101,7 +101,7 @@
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.2/res/anim/catalyst_fade_in.xml"
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/res/anim/catalyst_fade_in.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
@@ -121,7 +121,7 @@
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.2/res/anim/catalyst_slide_down.xml"
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/res/anim/catalyst_slide_down.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",

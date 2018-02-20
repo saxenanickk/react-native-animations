@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -12,50 +6,45 @@ import {
   View,
 	Dimensions,
 	TextInput,
-	BackHandler
+  BackHandler,
+  TouchableOpacity
 } from 'react-native';
 
 const  { height, width } = Dimensions.get("window");
 import SlidingBox from "./SlidingBox";
+import withScaleAnimation from "./HOC";
 
+export function Button({
+  onPress,
+  label = 'Click me',
+  buttonStyle = styles.button,
+  textColor = styles.text,
+}) {
+
+  return (
+    <TouchableOpacity style={buttonStyle} onPress={onPress}>
+      <Text style={textColor}>{label.toUpperCase()}</Text>
+    </TouchableOpacity>
+  );
+}
+
+export function ScaledText({
+  onPress,
+  label = "Click Me",
+  textColor = styles.text
+}) {
+  return (
+    <Text onPress={onPress} style={textColor}>{label.toUpperCase()}</Text>
+  );
+}
+
+export const AnimatedBasicButton = withScaleAnimation(ScaledText);
 
 export default class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      startAnimation: false
-    };
-		this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
-  }
-
-  componentWillMount() {
-		BackHandler.addEventListener("hardwareBackPress", this.handleBackButtonClick);
-	}
-
-	componentWillUnmount() {
-		BackHandler.removeEventListener("hardwareBackPress", this.handleBackButtonClick);
-	}
-
-  handleBackButtonClick = () => {
-  	this.setState({ startAnimation: false });
-		return true;
-	}
-
   render() {
     return (
       <View style={styles.container}>
-        <SlidingBox startAnimation={this.state.startAnimation}>
-         {/*!this.state.startAnimation ?
-         <Text onPress={() => this.setState({ startAnimation: true })} style={styles.welcome}>
-                Click Here
-              </Text>:
-         <View style={{ borderWidth:1, borderColor: "#000000", margin: 10 }}>
-          <TextInput placeHolder={"Origin"} />
-          <TextInput placeHolder={"Destination"}/>
-          <Text>Press Back Button to go to previous state.</Text>
-         </View>*/}
-        </SlidingBox>
+        <AnimatedBasicButton onPress={() => console.log("Hi..")} />
       </View>
     );
   }
@@ -65,6 +54,8 @@ const styles = StyleSheet.create({
   container: {
   	flex: 1,
     backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center"
   },
   welcome: {
     borderWidth: 1,
@@ -72,5 +63,29 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
     borderColor: "#000000"
-  }
+  },
+  button: {
+    width: 150,
+    height: 75,
+    backgroundColor: 'ivory',
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 15,
+  },
+  text: {
+    color: 'red',
+    fontSize: 16,
+  },
+  brown: {
+    color: 'maroon',
+  },
+  brownButton: {
+    width: 100,
+    height: 60,
+    backgroundColor: 'seashell',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 15,
+  },
 });
