@@ -17,8 +17,20 @@ export default class LoginScreen extends React.Component {
 		header: null,
 	}
 
+	constructor() {
+		super()
+		this.value = new Animated.Value(0)
+	}
+
 	componentWillMount() {
 		this.loginHeight = new Animated.Value(300)
+	}
+
+	startAnimation = () => {
+		Animated.timing(this.value, {
+			toValue: 1,
+			duration: 500,
+		}).start()
 	}
 
 	increaseHeightOfLogin = () => {
@@ -36,6 +48,11 @@ export default class LoginScreen extends React.Component {
 	}
 
 	render() {
+		const newOpacity = this.value.interpolate({
+			inputRange: [0, 1],
+			outputRange: [1, 0],
+		})
+
 		const headerTextOpacity = this.loginHeight.interpolate({
 			inputRange: [300, height],
 			outputRange: [1, 0],
@@ -52,7 +69,7 @@ export default class LoginScreen extends React.Component {
 		})
 
 		return (
-			<View style={{ flex: 1 }}>
+			<Animated.View style={{ flex: 1, opacity: newOpacity }}>
 				<Animated.View
 					style={{
 						position: "absolute",
@@ -117,7 +134,7 @@ export default class LoginScreen extends React.Component {
 									HELLO
 								</Text>
 							</Animated.View>
-							<TouchableOpacity onPress={() => this.increaseHeightOfLogin()}>
+							<TouchableOpacity onPress={() => this.startAnimation()}>
 								<View
 									style={{
 										paddingHorizontal: 25,
@@ -142,7 +159,7 @@ export default class LoginScreen extends React.Component {
 						</View>
 					</Animatable.View>
 				</View>
-			</View>
+			</Animated.View>
 		)
 	}
 }

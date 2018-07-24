@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { StyleSheet, Text, View, Dimensions } from "react-native"
 import { StackNavigator, createBottomTabNavigator } from "react-navigation"
+import Animation from "lottie-react-native"
 import LoginScreen from "./Screens/LoginScreen"
 import Explore from "./Screens/Explore"
 import Inbox from "./Screens/Inbox"
@@ -11,7 +12,25 @@ const { height, width } = Dimensions.get("window")
 
 export default class App extends Component {
 	render() {
-		return <AppNavigator />
+		return (
+			<AppNavigator />
+			// <View
+			// 	style={{
+			// 		flex: 1,
+			// 		backgroundColor: "#A6207E",
+			// 	}}>
+			// 	<View style={{ borderWidth: 1, position: "absolute" }}>
+			// 		<Animation
+			// 			ref={animation => {
+			// 				this.animation = animation
+			// 			}}
+			// 			style={{ width: 80, height: 80 }}
+			// 			loop={true}
+			// 			source={require("./searching_for_location.json")}
+			// 		/>
+			// 	</View>
+			// </View>
+		)
 	}
 }
 
