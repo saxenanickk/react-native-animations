@@ -8,20 +8,20 @@
         "source": "/Users/maverick/Documents/ReactNative/reactanimations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/color/abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
         "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/color/abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/color/abc_tint_spinner.xml"
+        "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
         "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.1.0/res/color/abc_tint_spinner.xml"
     },
     {
         "merged": "/Users/maverick/Documents/ReactNative/react-native-animations/android/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
