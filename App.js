@@ -36,6 +36,12 @@ export default class App extends Component {
 
 const AppNavigator = createBottomTabNavigator(
 	{
+		Trips: {
+			screen: Trips,
+			navigationOptions: {
+				tabBarLabel: "TRIPS"
+			}
+		},
 		Inbox: {
 			screen: Inbox,
 			navigationOptions: {
@@ -46,12 +52,6 @@ const AppNavigator = createBottomTabNavigator(
 			screen: Explore,
 			navigationOptions: {
 				tabBarLabel: "EXPLORE"
-			}
-		},
-		Trips: {
-			screen: Trips,
-			navigationOptions: {
-				tabBarLabel: "TRIPS"
 			}
 		},
 		Saved: {
