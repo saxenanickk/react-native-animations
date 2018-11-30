@@ -100,17 +100,6 @@ export default class Trips extends React.Component {
 					snapToAlignment={"center"}
 					renderItem={this.renderItem}
 				/>
-				{/* {this.state.selectedIndex !== null && (
-					<View
-						style={{
-							width: width,
-							height: height,
-							backgroundColor: "#000000",
-							opacity: 0.4,
-							position: "absolute"
-						}}
-					/>
-				)} */}
 			</View>
 		);
 	}
